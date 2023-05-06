@@ -1,0 +1,76 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+   background-color: rgba(10, 10, 39, 0.899); 
+   overflow: hidden;
+}
+
+header{    
+    filter: blur(2px);
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+header h1{
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.containerSpan {
+    display: flex;
+    position: absolute;
+    gap: 1rem;
+    
+}
+
+.containerSpan span{
+    background-color: rgb(238, 179, 18);
+    width: 20px;
+    height: 20px;
+    border-radius: 50% ;    
+    box-shadow: 0px 0px 122px rgb(211, 223, 166);
+    animation: animate 8s linear infinite;
+    animation-duration: calc(150s/ var(--i));
+}
+
+.containerSpan span:nth-child(even){
+    background-color: rgb(70, 166, 174);
+    box-shadow: 0px 0px 122px rgb(208, 230, 228);
+}
+.containerSpan2{
+    display: flex;
+    position: absolute;
+    gap: 1rem;
+    
+}
+.containerSpan2 span{
+    background-color: rgb(21, 56, 197);
+    width: 20px;
+    height: 20px;
+    border-radius: 50% ;    
+    box-shadow: 0px 0px 122px rgb(30, 34, 19);
+    animation: animate 8s linear infinite;
+    animation-duration: calc(150s/ var(--i));
+}
+.containerSpan2 span:nth-child(even){
+    background-color: rgb(35, 64, 90);
+    box-shadow: 0px 0px 122px rgb(208, 230, 228);
+}
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
