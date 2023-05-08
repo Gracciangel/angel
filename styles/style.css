@@ -10,7 +10,6 @@ body {
 }
 
 header{    
-    filter: blur(2px);
     display: flex ;
     flex-direction: column;
     justify-content: center;
@@ -22,10 +21,37 @@ header{
 header h1{
     color: white;
     cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+header h1 span{
+    color: white;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
 }
 
 
+.containerSpan .message{
+    margin: auto;
+    color: white;
+}
+#angel::after{
+content: ']';
+margin: 0 45px;
 
+}
+#angel::before{
+    content: '[';
+    margin: 0 45px;
+}
+
+#angel #angelSpan{
+  
+    animation-name:change ;
+    animation-duration:   5s;
+    animation-iteration-count: infinite;
+}
 .containerSpan {
     display: flex;
     position: absolute;
@@ -33,18 +59,18 @@ header h1{
     
 }
 
-.containerSpan span{
-    background-color: rgb(238, 179, 18);
-    width: 20px;
-    height: 20px;
-    border-radius: 50% ;    
-    box-shadow: 0px 0px 122px rgb(211, 223, 166);
+.containerSpan .span{
+    background-color: rgb(27, 58, 105);
+    width: 6px;
+    height: 6px;
+    border-radius: 15px ;    
+    box-shadow: 20px 24px 322px rgb(150, 183, 399);
     animation: animate 8s linear infinite;
     animation-duration: calc(150s/ var(--i));
 }
 
-.containerSpan span:nth-child(even){
-    background-color: rgb(70, 166, 174);
+.containerSpan .span:nth-child(even){
+    background-color: rgb(20, 59, 198);
     box-shadow: 0px 0px 122px rgb(208, 230, 228);
 }
 .containerSpan2{
@@ -53,7 +79,7 @@ header h1{
     gap: 1rem;
     
 }
-.containerSpan2 span{
+.containerSpan2 .span{
     background-color: rgb(21, 56, 197);
     width: 20px;
     height: 20px;
@@ -62,10 +88,17 @@ header h1{
     animation: animate 8s linear infinite;
     animation-duration: calc(150s/ var(--i));
 }
-.containerSpan2 span:nth-child(even){
-    background-color: rgb(35, 64, 90);
-    box-shadow: 0px 0px 122px rgb(208, 230, 228);
+
+.foot{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
 }
+
+
 @keyframes animate{
     0%{
         transform: translateY(100vh) scale(0);
@@ -74,3 +107,26 @@ header h1{
         transform: translateY(-10vh) scale(1);
     }
 }
+        
+@keyframes change{
+    0%{
+        opacity: 1;
+        color: black;
+
+    }
+    25%{
+        opacity: 1;
+        color: green;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+        color: red;
+    }
+    100%{
+        opacity: 0;
+        color: whitesmoke;
+    }
+}   
